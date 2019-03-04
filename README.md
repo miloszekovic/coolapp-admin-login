@@ -4,8 +4,9 @@ coolAPP Admin Login Page - design, code, gulp
 
 This project can be used as a rough start for your new cool app admin login.
 
-    - css grig
+    - css grid
     - scss
+    - responsive
     - gulp
 
 <img src="dist/img/screen1.jpg" width="100%" />
