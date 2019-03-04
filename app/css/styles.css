@@ -557,9 +557,6 @@ button,
   grid-template-rows: 7rem auto 7rem;
   align-items: center;
   grid-area: news; }
-  .wrapper-news.wrapper-news__bgimg {
-    background: url(../../img/fresh.jpg) center center no-repeat;
-    background-size: cover; }
   @media screen and (max-width: 1239px) {
     .wrapper-news {
       grid-template-rows: auto 7rem;
