@@ -1,0 +1,164 @@
+/* global */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext');
+@font-face {
+    font-family: "Netto OT";
+    src: url("../../fonts/netto/NettoOT.woff2") format("woff2"), url("../../fonts/netto/NettoOT.woff") format("woff");
+    font-style: normal;
+    font-weight: 400;
+}
+
+html, 
+body {
+    height: $full;
+    min-height: $full;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: #f9f9f9;
+    color: $dark;
+    @include font-size(1.6, 2.7);
+}
+
+body, 
+body *,
+input, 
+textarea,
+select {
+    font-family: 'Open Sans', Arial, sans-serif;
+}
+
+a { 
+    color: $blue;
+    text-decoration: none;
+    
+    &:hover {
+        color: $dark-blue;
+        @extend .hov;
+    }
+    
+    &:active {
+        @extend .act;
+    }
+
+    &:focus {
+        outline: 0;
+        border: 0;
+    }
+}
+
+h1, 
+h2,
+h3,
+.logo a {
+    font-family: "Netto OT", Arial, sans-serif;
+}
+
+h1 {
+    @include font-size(2.8, 2.8);
+    color: white;
+    font-weight: normal;
+
+    strong {
+        font-style: italic;
+    }
+}
+
+h2 {
+    @include font-size(2.3, 3);
+}
+
+h3 {
+    @include font-size(3.8, 3.8);
+    color: $dark;
+}
+
+
+/* main grid */
+main {
+    height: $full;
+    min-height: $full;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+        "news forms"
+    ;
+
+    @media screen and (max-width: 1239px) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas: 
+            "forms"
+            "news"
+        ;
+    }
+
+    section {
+        height: $full;
+        min-height: $full;
+
+        @media screen and (max-height: 670px) {
+            height: auto;
+            min-height: auto;
+        }
+    }
+}
+
+/* buttons */
+button, 
+.button {
+    border: 2px solid white !important;
+    background: white;
+    color: $blue;
+    display: inline-block;
+    padding: 13px 25px;
+    margin-top: 2.5rem;
+    @include rounded--corners($size: 6rem 3rem);
+
+    &:hover {
+        background: $blue;
+        color: white;
+        @extend .hov;
+    }
+    
+    &:active {
+        background: $dark-blue;
+        color: white;
+        @extend .act;
+    }
+
+    &:focus {
+        outline: 0;
+        border: 0;
+    }
+
+    &.login-button {
+        border: 2px solid $blue !important;
+        background: $blue;
+        color: white;
+        font-weight: bold;
+        @include box--shadow(0 0 3px 3px rgba($light, .2));
+        @extend .fade;
+        padding: 16px 40px;
+        margin-bottom: 30px;
+
+        & * {
+            @extend .fade;
+        }
+
+        &:hover {
+            border: 2px solid $blue !important;
+            background: white;
+            color: $blue;
+        }
+        
+        &:active {
+            border: 2px solid $dark-blue !important;
+            background: white;
+            color: $dark-blue;
+        }
+    }
+}

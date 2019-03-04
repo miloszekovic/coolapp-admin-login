@@ -1,0 +1,95 @@
+body.theme-fresh {
+
+    a { 
+        color: $green;
+        
+        &:hover {
+            color: $dark-green;
+        }
+    }
+
+    button, 
+    .button {
+        color: $green;
+
+        &:hover {
+            background: $green;
+            color: white;
+        }
+        
+        &:active {
+            background: $dark-green;
+            color: white;
+        }
+
+        &.login-button {
+            border: 2px solid $green !important;
+            background: $green;
+            color: white;
+
+            &:hover {
+                border: 2px solid $green !important;
+                background: white;
+                color: $green;
+            }
+            
+            &:active {
+                border: 2px solid $dark-green !important;
+                background: white;
+                color: $dark-green;
+            }
+        }
+    }
+
+    .wrapper-news {
+        background: url(../../img/fresh.jpg) center center no-repeat;
+        background-size: cover;
+
+        h1 {
+            color: $blue;
+            text-shadow: none;
+        }
+
+        .news {
+
+            @media screen and (max-width: 1239px) {
+                align-self: start;
+            }
+    
+            ul {
+    
+                li {
+                    background: rgba($green, .9);
+    
+                    &.news--important {
+                        background: rgba($pink, .9);
+                    }
+                }
+            }
+        }
+    }
+
+    .wrapper-forms {
+        background: -webkit-linear-gradient(240deg, #f9f9f9 55%, #f2f2f2 45%);
+        background: -o-linear-gradient(240deg, #f9f9f9 55%, #f2f2f2 45%);
+        background: -moz-linear-gradient(240deg, #f9f9f9 55%, #f2f2f2 45%);
+        background: linear-gradient(240deg, #f9f9f9 55%, #f2f2f2 45%);
+
+        .forms-container div h3 {
+            font-weight: normal;
+        }
+    
+        .forms-container div ul li input {
+    
+            &:hover {
+                border-bottom: 3px solid rgba($green, 1);
+            }
+
+            &:focus {
+                border-bottom: 3px solid rgba($dark-green, 1);
+            }
+        }
+    }
+
+
+}

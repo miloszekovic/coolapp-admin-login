@@ -1,0 +1,100 @@
+/* sass mixing */
+.floating { 
+    display: inline-block;
+    vertical-align: top;
+}
+
+.hov { 
+    opacity:.80;
+    -moz-opacity:.80; 
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80); 
+    -MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=80)";
+    transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+}
+
+.act { 
+    opacity:.60; 
+    -moz-opacity:.60; 
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60); 
+    -MS-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    transition: all 0.8s ease;
+    -webkit-transition: all 0.8s ease;
+    -moz-transition: all 0.8s ease;
+    -ms-transition: all 0.8s ease;
+    -o-transition: all 0.8s ease;
+}
+
+@mixin rounded--corners($size:50%) {
+    border-radius: $size;
+    -webkit-border-radius: $size;
+    -moz-border-radius: $size;
+}
+
+@mixin box--shadow($size) {
+    -webkit-box-shadow: $size;
+    -moz-box-shadow: $size;
+    box-shadow: $size;
+}
+
+.fade {
+    transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+}
+
+.no--fade, 
+.no--fade * { 
+    transition: none; 
+    -webkit-transition: none; 
+    -moz-transition: none; 
+    -ms-transition: none; 
+    -o-transition: none;  
+}
+
+@mixin transitions($transition...) {
+    -moz-transition: $transition;
+    -o-transition: $transition;
+    -webkit-transition: $transition;
+    -ms-transition: $transition;
+    transition: $transition;
+}
+
+.centering {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    line-height: 0;
+}
+
+/* fonts */
+@mixin font-size($size:1.6, $line: $size * 1.5){
+    font-size: ($size * 10) + px;
+    line-height: ($line * 10) + px;
+    font-size: $size + rem;
+    line-height: $line + rem;
+}
+
+/* animations */
+@mixin animations($animation...) {
+    -moz-animation: $animation;
+    -o-animation: $animation;
+    -webkit-animation: $animation;
+    -ms-animation: $animation;
+    animation: $animation;
+}
