@@ -18,6 +18,8 @@ This project can be used as a rough start for your new cool app admin login.
 
 <a href="http://mze.ninja/demos/coolapp-light/fresh.html" target="_blank">Theme Light Fresh</a>
 
+<a href="http://mze.ninja/demos/coolapp-dark/" target="_blank">Theme Dark</a>
+
 ### Setup
 gulp
 
