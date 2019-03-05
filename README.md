@@ -13,6 +13,8 @@ This project can be used as a rough start for your new cool app admin login.
 
 <img src="dist/img/screen2.jpg" width="100%" />
 
+<img src="dist/img/screen.jpg" width="100%" />
+
 ### Demo
 <a href="http://mze.ninja/demos/coolapp-light/" target="_blank">Theme Light Sky</a>
 
